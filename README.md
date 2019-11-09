@@ -28,6 +28,7 @@ public interface RevisionRepository<T, ID extends Serializable, N extends Number
 
 
 You can pull in this functionality to your repositories by simply additionally extending the interface just mentioned:
+
 --
 interface PersonRepository extends RevisionRepository<Person, Long, Integer>, CrudRepository<Person, Long> {
   // Your query methods go here
@@ -36,3 +37,5 @@ interface PersonRepository extends RevisionRepository<Person, Long, Integer>, Cr
 --
 
 Open H2 Console to check audit and revision history data.
+
+http://localhost:9090/h2-console
